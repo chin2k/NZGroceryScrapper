@@ -68,7 +68,7 @@ for department in departments:
 
 
 csv_columns = ['date', 'name', 'price', 'promoprice', 'priceMode', 'volumeSize','dept', 'sku']
-csv_file = f"C:/Data/Prices/wwnz/{today}-WWNZPrices.csv"
+csv_file = f"{today}-WWNZPrices.csv"
 
 try:
     with open(csv_file, 'w', newline='', encoding='utf-8') as csvfile:
@@ -76,4 +76,4 @@ try:
         writer.writeheader()
         writer.writerows(products_output)
 except IOError:
-    print("I/O error")
+    print("Error")
